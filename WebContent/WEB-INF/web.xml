@@ -31,6 +31,11 @@
 	<servlet>
 		<servlet-name>home</servlet-name>
 		<servlet-class>com.project.HomeServlet</servlet-class>
+		<init-param>
+			<param-name>CompanyName</param-name>
+			<param-value>Google</param-value>
+		</init-param>
+		
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>home</servlet-name>
@@ -52,4 +57,9 @@
 		<servlet-name>landing</servlet-name>
 		<url-pattern>/landing</url-pattern>
 	</servlet-mapping>
+	<context-param>
+		<param-name>CompanyName</param-name>
+		<param-value>ADP</param-value>
+	</context-param>
+
 </web-app>

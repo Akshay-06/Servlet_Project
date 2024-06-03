@@ -3,6 +3,7 @@ package com.project;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import jakarta.servlet.ServletConfig;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -17,11 +18,13 @@ public class HomeServlet extends HttpServlet {
 	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException {
 
 		HttpSession session = req.getSession();
+		ServletConfig conf = getServletConfig();
 
 		String uname = (String) session.getAttribute("username");
 		String pass = (String) session.getAttribute("password");
 
 		PrintWriter out = res.getWriter();
+		out.println("<h1>"+ conf.getInitParameter("CompanyName") +"</h1>");
 		out.println("Welcome to the home page " + uname);
 
 	}
