@@ -19,4 +19,15 @@ public class SquareServlet extends HttpServlet{
 		PrintWriter out = res.getWriter();
 		out.println("Result is "+result);
 	}
+	
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		
+		int num = Integer.parseInt(req.getParameter("result"));
+		
+		int result = num * num;
+		
+		PrintWriter out = res.getWriter();
+		out.println("Result is "+result);
+	}
+	
 }

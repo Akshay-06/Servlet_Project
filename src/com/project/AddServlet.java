@@ -35,4 +35,16 @@ public class AddServlet extends HttpServlet{
 //		PrintWriter out = res.getWriter();
 //		out.println(result);
 	}
+	
+	
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+		
+		int num1 = Integer.parseInt(req.getParameter("num1"));
+		int num2 = Integer.parseInt(req.getParameter("num2"));
+		
+		int result = num1-num2;
+		
+		res.sendRedirect("square?result="+result); // This method is called URL Rewriting
+		
+	}
 }
