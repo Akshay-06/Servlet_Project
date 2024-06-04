@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/multiply")
 public class MultiplyServlet extends HttpServlet {
 	
-	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		
 		int num1 = Integer.parseInt(req.getParameter("num1"));
 		int num2 = Integer.parseInt(req.getParameter("num2"));
