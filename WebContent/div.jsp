@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,13 +8,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+	<%!int result;%>
 	<%
 	int num1 = Integer.parseInt(request.getParameter("num1"));
 	int num2 = Integer.parseInt(request.getParameter("num2"));
 
-	int result = num1 / num2;
-	
-	out.println("Result is "+result);
+	result = num1 / num2;
 	%>
+	The result is
+	<%=result%>
 </body>
 </html>
