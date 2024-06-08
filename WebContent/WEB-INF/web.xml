@@ -65,7 +65,7 @@
     <servlet-name>student</servlet-name>
     <url-pattern>/registerStudent</url-pattern>
   </servlet-mapping>
- <filter>
+  <filter>
     <display-name>StudentFilter</display-name>
     <filter-name>StudentFilter</filter-name>
     <filter-class>com.project.StudentFilter</filter-class>
@@ -73,5 +73,21 @@
   <filter-mapping>
     <filter-name>StudentFilter</filter-name>
     <url-pattern>/registerStudent</url-pattern>
-  </filter-mapping> 
+  </filter-mapping>
+ <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.project.login.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>com.project.login.Logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
 </web-app>
