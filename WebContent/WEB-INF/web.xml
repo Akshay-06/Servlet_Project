@@ -74,7 +74,7 @@
     <filter-name>StudentFilter</filter-name>
     <url-pattern>/registerStudent</url-pattern>
   </filter-mapping>
- <servlet>
+  <servlet>
     <servlet-name>Login</servlet-name>
     <servlet-class>com.project.login.Login</servlet-class>
   </servlet>
@@ -82,12 +82,20 @@
     <servlet-name>Login</servlet-name>
     <url-pattern>/Login</url-pattern>
   </servlet-mapping>
-   <servlet>
+  <servlet>
     <servlet-name>Logout</servlet-name>
     <servlet-class>com.project.login.Logout</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Logout</servlet-name>
     <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>FileUploadServlet</servlet-name>
+    <servlet-class>com.project.FileUploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FileUploadServlet</servlet-name>
+    <url-pattern>/upload</url-pattern>
   </servlet-mapping>
 </web-app>
